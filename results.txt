@@ -1,0 +1,28 @@
+Task 3: Linear Regression - Results
+
+Dataset: Housing Price Prediction Dataset
+Rows: 545
+Columns: 13
+Target: price
+Train/Test split: 80% / 20%
+Random state: 42
+
+Simple Linear Regression
+Feature: area
+MAE: 1474748.13
+RMSE: 1917103.70
+R²: 0.2729
+Equation: price = 425.73 * area + 2512254.26
+
+Multiple Linear Regression
+Numerical features: area, bedrooms, bathrooms, stories, parking
+Categorical features: mainroad, guestroom, basement, hotwaterheating, airconditioning, prefarea, furnishingstatus
+MAE: 970043.40
+RMSE: 1324506.96
+R²: 0.6529
+
+Interpretation:
+- The simple model uses only area, so it explains about 27.29% of price variation in the test set.
+- The multiple model uses property size, room/features, parking and categorical amenities, and explains about 65.29% of test-set price variation.
+- A positive coefficient means the feature is associated with a higher predicted price while holding the other model features constant.
+- For categorical variables, coefficients are relative to the dropped reference category created by one-hot encoding.
